@@ -1,0 +1,95 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f3eb; 
+  font-family: 'Georgia', serif; 
+
+  h2 {
+    margin-bottom: 20px;
+    color: #4b3832; 
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    padding: 40px;
+    width: 350px; 
+    border: 1px solid #e0dacc; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input,
+    button {
+      width: 100%;
+      max-width: 300px; 
+      margin: 10px 0; 
+      text-align: center; 
+      padding: 12px; 
+      box-sizing: border-box; 
+    }
+
+    input {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+
+      &:focus {
+        border-color: #9b7d5c; 
+        outline: none;
+      }
+    }
+
+    button {
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    // 기본 로그인 버튼 스타일
+    button[type="submit"] {
+      background-color: #8b5e34; 
+      color: white;
+
+      &:hover {
+        background-color: #1565c0;
+      }
+    }
+
+    // 카카오 로그인 버튼 스타일
+    .kakao-login {
+      background-color: #FEE500; 
+      color: #3c1e1e; 
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        background-image: url('https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png'); // 카카오 로고 이미지
+        background-size: cover;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+
+      &:hover {
+        background-color: #e4d000; 
+      }
+    }
+  }
+}
